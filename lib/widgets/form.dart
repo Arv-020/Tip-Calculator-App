@@ -121,7 +121,7 @@ class TipForm extends StatelessWidget {
                         )
                       : CustomButton(
                           function: changeIsPressed,
-                          height: 60,
+                          height: 51,
                           width: double.maxFinite,
                           borderRadius: BorderRadius.circular(8),
                           child: Text(
