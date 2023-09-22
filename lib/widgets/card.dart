@@ -132,43 +132,47 @@ class TipCard extends StatelessWidget {
                 //     : SizedBox(
                 //         width: 50,
                 //       ),
-                Expanded(
-                  flex: 1,
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        const Text(
-                          "Total tip",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Text(
-                              "\$",
-                              style: GoogleFonts.asap(
-                                  color: const Color.fromARGB(255, 1, 199, 186),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w900),
-                            ),
-                            const SizedBox(
-                              width: 1,
-                            ),
-                            Text(
-                              totalTip,
-                              style: GoogleFonts.asap(
-                                color: const Color.fromARGB(255, 1, 199, 186),
-                                fontSize: 25,
-                                fontWeight: FontWeight.w900,
-                                letterSpacing: 3,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Expanded(
+                    flex: 1,
+                    child: SizedBox(
+                      width: 130,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          const Text(
+                            "Total tip",
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text(
+                                "\$",
+                                style: GoogleFonts.asap(
+                                    color:
+                                        const Color.fromARGB(255, 1, 199, 186),
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w900),
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
+                              const SizedBox(
+                                width: 1,
+                              ),
+                              Text(
+                                totalTip,
+                                style: GoogleFonts.asap(
+                                  color: const Color.fromARGB(255, 1, 199, 186),
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w900,
+                                  letterSpacing: 3,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
