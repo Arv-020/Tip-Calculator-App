@@ -36,33 +36,37 @@ class TipCard extends StatelessWidget {
               style:
                   GoogleFonts.asap(fontWeight: FontWeight.bold, fontSize: 19),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "\$",
-                  style: GoogleFonts.asap(
-                      fontSize: 30, fontWeight: FontWeight.w900),
-                ),
-                const SizedBox(
-                  width: 1,
-                ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Text(
-                    splitAmount.toString(),
-                    style: GoogleFonts.asap(
-                      fontSize: 50,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 4,
-                    ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "\$",
+                        style: GoogleFonts.asap(
+                            fontSize: 30, fontWeight: FontWeight.w900),
+                      ),
+                      const SizedBox(
+                        width: 1,
+                      ),
+                      Text(
+                        splitAmount.toString(),
+                        style: GoogleFonts.asap(
+                          fontSize: 50,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 4,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             const SizedBox(
               height: 5,
@@ -132,12 +136,11 @@ class TipCard extends StatelessWidget {
                 //     : SizedBox(
                 //         width: 50,
                 //       ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Expanded(
-                    flex: 1,
+                Expanded(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
                     child: SizedBox(
-                      width: 130,
+                      width: 140,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
